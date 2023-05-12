@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="inherit_sale_order_form_view">
+        <field name="name">inherited.sale.order.form.view</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/group[@name='sale_header']/group[@name='order_details']/field[@name='payment_term_id']"
+                   position="after">
+                <field name="combo_id"/>
+            </xpath>
+        </field>
+    </record>
+<!--    <record id="action_custom_orders" model="ir.actions.act_window">-->
+<!--        <field name="name">Sales Orders Custom</field>-->
+<!--        <field name="res_model">sale.order</field>-->
+<!--        <field name="view_mode">tree,form</field>-->
+<!--    </record>-->
+    <record id="product_combo_details_report" model="ir.actions.act_window">
+           <field name="name">product combo</field>
+           <field name="res_model">product.combo</field>
+           <field name="view_mode">tree,form</field>
+        </record>
+    <menuitem id="combo_inherit_menu"
+              name="Combo details"
+              parent="sale.sale_menu_root" action="product_combo_details_report"
+              sequence="37"/>
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="product_combo_tree_view">
+        <field name="name">product.combo.tree.view</field>
+        <field name="model">product.combo</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="sub_product_ids"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="product_combo_form_view">
+        <field name="name">product.combo.form.view</field>
+        <field name="model">product.combo</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <group>
+                        <field name="sub_product_ids"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
