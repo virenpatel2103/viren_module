@@ -7,4 +7,4 @@ class ProductCombo(models.Model):
     _rec_name = "name"
 
     name = fields.Char(string="Combo name", required=True)
-    sub_product_ids = fields.Many2many('product.template', string="Select products", required=True)
+    sub_product_ids = fields.Many2many('product.product', string="Select products", required=True)

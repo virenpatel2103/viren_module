@@ -10,6 +10,7 @@
         'security/ir.model.access.csv',
         'views/inherit_sale_order_model.xml',
         'views/product_combo_view.xml',
+        # 'views/website_layout_view.xml',
     ],
     "demo": [],
     "qweb": [],
