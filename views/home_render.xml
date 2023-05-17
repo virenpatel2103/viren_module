@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="home_render">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"/>
+        <div class="main_container_home">
+            <t t-call="website.layout">
+            </t>
+        </div>
+    </template>
+</odoo>

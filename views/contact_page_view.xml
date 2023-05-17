@@ -1,31 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="contact_page" name="All Contact">
-        <style>
-            .main_container {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: nowrap;
-            background-color: DodgerBlue;
-            }
-
-            .main_container > div {
-            background-color: #f1f1f1;
-            text-align: center;
-            line-height: 75px;
-            font-size: 30px;
-            }
-        </style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia"/>
         <t t-call="website.layout">
             <div class="main_container">
-                <div>
-                    <h1>Helloworld</h1>
-                    <img src="/home/odoo/Downloads/bookc.jpeg"/>
-                </div>
-                <div>
-                    <h1>Helloworld</h1>
-                    <img src="/home/odoo/Downloads/bookc.jpeg"/>
-                </div>
+                <t t-foreach="records" t-as="rec">
+                    <div class="information">
+                        <div>
+                            <span>
+                                <b>Name :</b><t t-out="rec.name"/>
+                                <br/>
+                            </span>
+                            <span>
+                                <b>E-mail :</b><t t-out="rec.email"/>
+                                <br/>
+                            </span>
+                            <span>
+                                <b>Address :</b><t t-out="rec.street2"/>
+                                <t t-out="rec.street"/>
+                            </span>
+                        </div>
+                        <div class="image_group">
+                            <span>
+                                <img t-att-src="'/web/image/res.partner/' + str(rec.id) + '/image_1920'"/>
+                            </span>
+                        </div>
+                    </div>
+                </t>
             </div>
         </t>
     </template>
