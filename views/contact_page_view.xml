@@ -5,25 +5,28 @@
         <t t-call="website.layout">
             <div class="main_container">
                 <t t-foreach="records" t-as="rec">
-                    <div class="information">
-                        <div>
-                            <span>
-                                <b>Name :</b><t t-out="rec.name"/>
-                                <br/>
-                            </span>
-                            <span>
-                                <b>E-mail :</b><t t-out="rec.email"/>
-                                <br/>
-                            </span>
-                            <span>
-                                <b>Address :</b><t t-out="rec.street2"/>
-                                <t t-out="rec.street"/>
-                            </span>
-                        </div>
-                        <div class="image_group">
-                            <span>
-                                <img t-att-src="'/web/image/res.partner/' + str(rec.id) + '/image_1920'"/>
-                            </span>
+                    <div class="info_wrapper">
+                        <div class="information">
+                            <div class="contact_details">
+                                <div class="contact_name contact_info">
+                                    <span class="contact_detail_title">Name :</span>
+                                    <span class="contact_detail_desc" t-att-title="rec.name"><t t-out="rec.name"/></span>
+                                </div>
+                                <div class="contact_email contact_info">
+                                    <span class="contact_detail_title">E-mail :</span>
+                                    <span class="contact_detail_desc" t-att-title="rec.email"><t t-out="rec.email"/></span>
+                                </div>
+                                <div class="contact_address contact_info">
+                                    <span class="contact_detail_title">Address :</span>
+                                    <span class="contact_detail_desc" t-attf-title="#{rec.street}#{rec.street2 and ', '}#{rec.street2}">
+                                        <t t-out="rec.street"/>
+                                        <t t-out="rec.street2"/>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="image_group">
+                                    <img t-att-src="'/web/image/res.partner/' + str(rec.id) + '/image_1920'"/>
+                            </div>
                         </div>
                     </div>
                 </t>

@@ -1,47 +1,124 @@
 .main_container{
-            color: #D7D6D6;
-            display: flex;
-            flex-wrap: wrap;
-//             overflow: scroll;
-            flex-display: row;
-            background-image: url('https://images.pexels.com/photos/62693/pexels-photo-62693.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load');
-            background-repeat: no-repeat;
-            background-size: cover;
-            padding: 36px;
-            height: 100%;
-            margin: 10px;
-            border: 1px solid;
-            }
+    color: #D7D6D6;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url('https://images.pexels.com/photos/62693/pexels-photo-62693.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 5%;
+    align-items: stretch;
+    align-content: space-evenly;
+}
 
-.main_container > .information{
-            box-shadow: 10px 10px 10px #ACA293;
-            display: flex;
+.main_container{
+    .info_wrapper{
+        padding: 10px;
+        width: 50%;
+    }
+    .information{
+        box-shadow: 0px 4px 14px -5px #000000;
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 15px;
+        background-color: #2d545e;
+        border-radius: 15px;
+        justify-content: space-between;
+        align-items: self-start;
+        height: 100%;
+        &:hover{
+            box-shadow: 0px 0px 20px #04f7b7;
+        }
+        .contact_info{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .contact_details{
+            text-align: left;
+            max-width: 70%;
+            .contact_detail_title{
+                color: #B96013;
+                font-weight: bold;
+                font-family: "Sofia", sans-serif;
+            }
+        }
+        .image_group{
+            padding-left: 15px;
+            min-width: 30%;
+            text-align: right;
+            img{
+                width: 100%;
+                border-radius: 10px;
+                height: auto;
+                max-height: 80px;
+                object-fit: cover;
+                background: #fff;
+            }
+        }
+    }
+}
+// tiny devices
+@media screen and (max-width: 475px){
+    .main_container{
+        .information{
             flex-wrap: wrap;
-            flex-display: row;
-            margin: 32px;
-            padding: 28px;
-            text-align: center;
-            line-height: 76px;
-            font-size: 30px;
-            background-color: #2d545e;
-            border-radius: 25px;
-            height: 320px;
+            .contact_details{
+                order: 2;
+                margin-top: 10px;
+                max-width: 100%;
+            }
             .image_group{
-                margin: 50px 50px 50px 50px;
-//                 height: 159px;
-//                 width: 156px;
+                padding-left: 0px;
             }
+        }
+    }
+}
+// Small devices
+@media screen and (max-width: 767px){
+    .main_container{
+        .info_wrapper{
+            width: 100%;
+        }
+    }
+}
+// medium devices
+@media screen and (min-width: 767px) and (max-width: 991px){
+    .main_container{
+        .information{
+            flex-wrap: wrap;
+            .contact_details{
+                order: 2;
+                margin-top: 10px;
+                max-width: none;
             }
-b {
-            color: #B96013;
-            margin: 15px;
-            font-weight: bold;
-            font-style: oblique;
-            font-family: "Sofia", sans-serif;
+            .image_group{
+                padding-left: 0px;
             }
+        }
+    }
+}
 
-.information:hover{
-    background-color: #49494b;
-    transform: scale(1.1);
-    color: #2BFE1C;
+// large screens
+@media screen and (min-width: 992px) and (max-width: 1200px){
+    .main_container{
+        .info_wrapper{
+            width: 33.33%;
+        }
+    }
+}
+// Extra large screens
+@media screen and (min-width: 1201px){
+    .main_container{
+        .info_wrapper{
+            width: 25%;
+        }
+    }
+}
+// kingfisher Extra large screens
+@media screen and (min-width: 2000px){
+    .main_container{
+        .info_wrapper{
+            width: 20%;
+        }
+    }
 }
