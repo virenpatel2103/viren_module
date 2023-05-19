@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 viren_module.access_product_combo,access_product_combo,viren_module.model_product_combo,base.group_user,1,1,1,1
+viren_module.access_split_product,access_split_product,viren_module.model_split_product,base.group_user,1,1,1,1
+viren_module.access_split_delivery,access_split_delivery,viren_module.model_split_delivery,base.group_user,1,1,1,1

@@ -13,6 +13,8 @@
         'views/website_layout_view.xml',
         'views/contact_page_view.xml',
         'views/home_render.xml',
+        'views/split_product_delivery_action_sale_order.xml',
+        'wizard/sale_order_split_delivery_wizard_view.xml',
     ],
     'assets': {
         'web.assets_frontend': [

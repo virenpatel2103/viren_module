@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="model_sale_order_action_split_delivery" model="ir.actions.server">
+            <field name="name">Split Delivery</field>
+            <field name="model_id" ref="viren_module.model_sale_order"/>
+            <field name="binding_model_id" ref="viren_module.model_sale_order"/>
+            <field name="binding_view_types">form</field>
+            <field name="state">code</field>
+            <field name="code">action = records.action_split_delivery()</field>
+        </record>
+</odoo>
